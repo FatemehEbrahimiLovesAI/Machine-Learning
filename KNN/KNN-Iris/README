@@ -1,0 +1,15 @@
+# KNN Classifier on Iris Dataset
+
+This is a simple Python script that uses the K-Nearest Neighbors algoritm to classify iris flowers based on their features.
+
+## Requirements
+
+- Python 3.x
+- Pandas
+- Scikit-learn
+
+
+you can install the required libraries using pip:
+
+pip install pandas
+pip install scikit-learn
