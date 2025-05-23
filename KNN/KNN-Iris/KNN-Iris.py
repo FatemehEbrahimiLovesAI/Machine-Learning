@@ -4,7 +4,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score,zero_one_loss
 
 # Importing a dataset and creating a dataframe
-df = pd.read_csv("Iris.data")
+df = pd.read_csv("Iris.data",header= None)
 
 # Separating labels from features
 x = df.iloc[:,0:-1]
