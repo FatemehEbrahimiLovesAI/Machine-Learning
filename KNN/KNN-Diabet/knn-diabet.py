@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import StandardScaler
 	
 # import dataset
-df = pd.read_csv(r'C:\Users\pc\Documents\university file\Machine Learning\Machine learning files\part2\diabetes.csv')
+df = pd.read_csv('diabetes.csv')
  
 # Separating data from the target
 data = df.iloc[:,0:-1]
