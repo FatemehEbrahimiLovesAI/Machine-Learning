@@ -3,12 +3,12 @@ from glob import glob
 from joblib import load
 import numpy as np
 
-model = load(r'C:\Users\pc\Documents\university file\Machine Learning\Machine learning files\part3\f.ebrahimi.Q1\cat-dog-model.joblib')
+model = load('cat-dog-model.joblib')
 
 data = []
 label = []
 
-for address in glob(r'C:\Users\pc\Documents\university file\Machine Learning\Machine learning files\part3\f.ebrahimi.Q1\load_dataset\*'):
+for address in glob('your_dataset_folder\*'):
 
     img = cv.imread(address)
     img_r = cv.resize(img,(32,32))
