@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # read dataset
-df = pd.read_csv(r'C:\Users\pc\Documents\university file\Machine Learning\Machine learning files\part4\basic samples\sample-1\data\student_loan_train.csv')
+df = pd.read_csv(r'data\student_loan_train.csv')
 
 # convert dataframe to an array
 train = np.array(df)
