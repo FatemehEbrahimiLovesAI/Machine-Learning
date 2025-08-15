@@ -62,7 +62,7 @@ df = pd.read_csv(r'C:\path\to\BostonHousing.csv')
 
 3. Run the Python script:
 
-python linear_regression.py
+python train.py
 
 
 
