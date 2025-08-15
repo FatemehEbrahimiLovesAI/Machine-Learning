@@ -91,7 +91,3 @@ Training Loop: Runs for a fixed number of epochs, printing performance metrics a
 ## Future Improvements
 
 Add a test phase to evaluate performance on unseen data.
-
-its error : 81.234
-its weights : [0.12, -0.34, 0.45, ...]
-**************************
