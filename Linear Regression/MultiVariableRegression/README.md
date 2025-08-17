@@ -1,41 +1,67 @@
-### Linear Regression from Scratch – Boston Housing Dataset
+### Linear Regression from Scratch (Boston Housing Example)
 
 ## Overview
+This project implements Multivariable Linear Regression from scratch using only NumPy and pandas, along with standard preprocessing tools from scikit-learn.
+It includes two main scripts:
 
-This project implements Linear Regression from scratch (without using sklearn's regression model) to predict housing prices from the Boston Housing dataset.
-It uses gradient descent for parameter optimization and Mean Squared Error (MSE) as the loss function.
-The code is designed to be modular and easy to extend — in the future, a test section will be added to evaluate the model on unseen data.
+**train.py** → trains a linear regression model on the dataset.
+
+**test.py** → evaluates the trained model on the dataset using saved weights and scaler.
+
 
 
 ---
 
-## Features
+## Files Overview
 
-Data loading from CSV file using pandas
+**train.py**
 
-Feature scaling with StandardScaler
+* Loads the dataset (BostonHousing.csv).
 
-Adding a bias term manually
+* Splits features (X) and target (y).
 
-Custom implementation of:
+* Normalizes features using StandardScaler and saves the fitted scaler (scaler.pkl) for later use.
 
-Linear Regression model
+* Adds a bias (intercept) column to the input data.
 
-Mean Squared Error (MSE) loss function
+* Initializes random weights.
 
-Gradient computation
+***Implements:***
 
-Gradient Descent optimization
+- Mean Squared Error (MSE) function
+
+- Linear Regression prediction function
+
+- Gradient calculation
+
+- Gradient Descent update rule
 
 
-Epoch-based training with detailed logging of:
+Trains the model for 100 epochs while printing the loss and weights.
 
-Epoch number
+Saves the trained weights into MultiVariablelinearRegressionWeights.csv.npy.
 
-Current error (MSE)
 
-Updated weights
+**test.py**
 
+* Loads the saved weights and scaler from training.
+
+* Loads the dataset (BostonHousing.csv).
+
+* Splits features (X) and target (y).
+
+* Applies the same normalization (using the saved scaler).
+
+***Implements:***
+
+* Linear Regression prediction function
+
+* Mean Squared Error (MSE) function
+
+* R² Score function
+
+
+Predicts the target values and prints R² score and MSE.
 
 
 
@@ -43,51 +69,55 @@ Updated weights
 
 ## Requirements
 
-Make sure you have Python installed along with the required libraries:
+**Install the necessary Python libraries:**
 
-pip install numpy pandas scikit-learn
+pip install numpy pandas scikit-learn joblib matplotlib
 
 
 ---
 
-## How to Run
+## Usage
 
-1. Download the Boston Housing dataset as BostonHousing.csv and place it in your specified path.
+**Training**
 
-
-2. Update the file path in the code:
-
-df = pd.read_csv(r'C:\path\to\BostonHousing.csv')
-
-
-3. Run the Python script:
+*Run the following command to train the model and save the weights + scaler:*
 
 python train.py
 
+***This will:***
+
+* Train the model on the dataset.
+
+* Save the learned weights in MultiVariablelinearRegressionWeights.csv.npy.
+
+* Save the fitted scaler in scaler.pkl.
+
+
+**Testing**
+
+After training, run:
+
+python test.py
+
+***This will:***
+
+* Load the saved weights and scaler.
+
+* Normalize the dataset.
+
+* Compute predictions.
+
+* Print R² score and MSE.
 
 
 
 ---
 
-## Code Structure
+## Dataset
 
-Data Preparation: Load and scale the dataset, add bias term.
+The default dataset used is Boston Housing (BostonHousing.csv).
+However, you can replace it with any dataset where:
 
-Model Functions:
+All columns except the last one are features.
 
-mse(y, y_hat): Calculates the Mean Squared Error.
-
-linear_regression(x, w): Predicts target values given features and weights.
-
-gradients(x, y, y_hat): Computes the gradients for each weight.
-
-gradient_decent(w, eta, grads): Updates weights using gradient descent.
-
-
-Training Loop: Runs for a fixed number of epochs, printing performance metrics after each epoch.
-
----
-
-## Future Improvements
-
-Add a test phase to evaluate performance on unseen data.
+The last column is the target variable.
