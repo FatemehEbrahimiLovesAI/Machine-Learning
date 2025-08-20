@@ -55,27 +55,17 @@ pip install pandas numpy scikit-learn
 
 ## Usage
 
-1. Run the script:
+**Run the script:**
 
 python SGDRegressor.py
 
 
-2. Example output:
+**Example output:**
 
 your mse score : 0.025
 your R2 score : 0.87
 
 
-
-
----
-
-## File Structure
-
-.
-├── main.py        # Main script with preprocessing, model training, evaluation
-├── README.md      # Project documentation
-└── HousesInfo.csv # Dataset (not included in repo)
 
 
 ---
