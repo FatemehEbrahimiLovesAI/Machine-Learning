@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 # Import dataset with column names
 cols = ["bedrooms", "bathrooms", "area", "zipcode", "price"]
 df = pd.read_csv(
-    r'C:\Users\pc\Documents\university file\Machine Learning\Machine learning files\part5\encoding\HousesInfo.csv',
+    'HousesInfo.csv',
     sep=" ",
     header=None,
     names=cols
