@@ -32,5 +32,5 @@
   This file will be updated in the future and will contain all the SVM mathematical vector prerequisites.
 
 ## Author / Contact
-  Author : F. Ebrahimi
-  Email : Fatemeh.Ebrahimi.Russophile@gmail.com
+  - Author : F. Ebrahimi
+  - Email : Fatemeh.Ebrahimi.Russophile@gmail.com
